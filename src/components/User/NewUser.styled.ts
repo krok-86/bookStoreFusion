@@ -6,9 +6,9 @@ const NewUserStyled = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
-  background-color: "#fcfffc";
+  background-color: ${(props) => props.theme.backgroundColorPosts};
   max-width: 450px;
-  border: 2px solid "#eee3fb";
+  border: ${(props) => props.theme.backgroundColorPosts};
   border-radius: 10px;
 
   .user-text-wrap {
@@ -29,7 +29,7 @@ const NewUserStyled = styled.div`
     font-weight: 900;
     padding: 5px;
     margin: 15px 50px;
-    color: #5916e4;
+    color: ${(props) => props.theme.colorPrimary};
   }
   /* .ant-form-item-required {
     ::text {
@@ -38,7 +38,7 @@ const NewUserStyled = styled.div`
   } */
   .newUser-text {
     ::placeholder {
-      color: "#cfacf5";
+      color: ${(props) => props.theme.colorTextPlaceHolder};
       opacity: 0.7;
     }
   }
@@ -49,12 +49,12 @@ const NewUserStyled = styled.div`
     gap: 50px;
   }
   .user-button {
-    color: #eee3fb;
+    color: ${(props) => props.theme.colorText};
   }
   .form-go-back {
     margin-bottom: 10px;
     text-decoration: none;
-    color: #5916e4;
+    color: ${(props) => props.theme.colorPrimary};
     &__grey {
       color: grey;
     }
@@ -63,26 +63,26 @@ const NewUserStyled = styled.div`
     }
   }
   .ant-input {
-    background-color: #fcfffc !important;
-    color: #4211c3 !important;
+    background-color: ${(props) => props.theme.backgroundColorPost} !important;
+    color: ${(props) => props.theme.colorTextInfo} !important;
     &-affix-wrapper {
-      background-color: #fcfffc !important;
+      background-color: ${(props) => props.theme.backgroundColorPost} !important;
     }
     &-password-icon {
-      color: #4211c3 !important;
+      color: ${(props) => props.theme.colorTextInfo} !important;
   }
 }
   .ant-form-item-label {
     label {
-      color: #5916e4;
+      color: ${(props) => props.theme.colorPrimary};
     }
   }
   input:-webkit-autofill {
-    -webkit-text-fill-color: #4211c3;
-    background-color: #4211c3 !important;
+    -webkit-text-fill-color: ${(props) => props.theme.colorTextInfo};
+    background-color: ${(props) => props.theme.colorTextInfo} !important;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px
-    #fcfffc;
+    ${(props) => props.theme.backgroundColorPost};
   }
 `;
 export default NewUserStyled;
